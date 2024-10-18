@@ -53,31 +53,6 @@ app.get('/lookup', async (req, res) => {
     }
 });
 
-app.get('/basiclookup', async (req, res) => {
-    const phoneNumber = req.query.phonenumber;
-
-    if (!phoneNumber) {
-        return res.status(400).send('Phone number is required');
-    }
-
-    try {
-        const basicResponse = await fetch(`/basiclookup?phonenumber=${phoneNumber}`);
-        const basicData = await basicResponse.json();
-        document.getElementById('basicResponse').innerText = JSON.stringify(basicData, null, 2);
-
-        const standardResponse = await fetch(`/standardlookup?phonenumber=${phoneNumber}`);
-        const standardData = await standardResponse.json();
-        document.getElementById('standardResponse').innerText = JSON.stringify(standardData, null, 2);
-
-        const advancedResponse = await fetch(`/advancedlookup?phonenumber=${phoneNumber}`);
-        const advancedData = await advancedResponse.json();
-        document.getElementById('advancedResponse').innerText = JSON.stringify(advancedData, null, 2);
-    } catch (error) {
-        console.error('Error performing lookup:', error);
-        alert('Error performing lookup. Please check the console for details.');
-    }
-});
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
