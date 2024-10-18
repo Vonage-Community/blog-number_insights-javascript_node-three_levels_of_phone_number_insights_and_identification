@@ -15,7 +15,7 @@ Discover phone number insights at three levels of detail using the [Number Insig
      VONAGE_API_SECRET=your_vonage_api_secret
      ```
    * Replace `your_vonage_api_key` and `your_vonage_api_secret` with your credentials from the Vonage Dashboard.
-4. Run the server: `node index.js`
+4. Run the server: `npm run dev`
 5. Access the app: http://localhost:3000
 
 To learn more, check out the blog post Three Levels of Phone Number Insights and Identification on the [Vonage blog](https://developer.vonage.com/en/blog).
