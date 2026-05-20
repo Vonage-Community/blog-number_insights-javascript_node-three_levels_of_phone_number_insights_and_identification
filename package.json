@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vonage/number-insights": "^1.14.0",
+    "@vonage/number-insights": "^1.16.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
   },
